@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Professory-UnderConstruction Website Template | Home :: W3layouts</title>
+<title>Compu_Seven</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link rel="stylesheet" href="web/css/style.css" media="all" type="text/css">
@@ -19,17 +19,17 @@ $(document).ready(function(){
 	var theHoursBox = $("#numhours");
 	var theMinsBox  = $("#nummins");
 	var theSecsBox  = $("#numsecs");
-	
+
 	var refreshId = setInterval(function() {
 	  var currentSeconds = theSecsBox.text();
 	  var currentMins    = theMinsBox.text();
 	  var currentHours   = theHoursBox.text();
 	  var currentDays    = theDaysBox.text();
-	  
+
 	  if(currentSeconds == 0 && currentMins == 0 && currentHours == 0 && currentDays == 0) {
 	  	// if everything rusn out our timer is done!!
 	  	// do some exciting code in here when your countdown timer finishes
-	  	
+
 	  } else if(currentSeconds == 0 && currentMins == 0 && currentHours == 0) {
 	  	// if the seconds and minutes and hours run out we subtract 1 day
 	  	theDaysBox.html(currentDays-1);
@@ -54,14 +54,14 @@ $(document).ready(function(){
 </head>
 <body>
 <div class="wrap">
-	<h1>company name</h1>
+	<h1>Compu_Seven</h1>
 <div class="main">
-	<h2>our website is on progressive</h2>
+	<h2>Nuestra Pagina Web se Encuentra en Progreso</h2>
 	<div class="banner">
 		<img src="web/images/banner.png" alt="" />
 	</div>
 	<div class="text">
-		<h3>Will' be here soon with a new website,&nbsp;<span>Estimated time remaining...!</span></h3>
+		<h3>Proximamente por aqui tendremos nuestro nuevo sitio,&nbsp;<span>Solo Faltan...!</span></h3>
 		<div class	="clock-ticker" class="clearfix">
 			<div class="block">
 				<span class="flip-top" id="numdays">8</span>
@@ -111,4 +111,3 @@ $(document).ready(function(){
 </div>
 </body>
 </html>
-
