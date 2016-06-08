@@ -1,17 +1,10 @@
 <?php
-/*
- * A Design by W3layouts
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
- *
- */			
+
  			$userName=$_REQUEST['userName'];
 			$userEmail=$_REQUEST['userEmail'];
 			$userPhone=$_REQUEST['userPhone'];
 			$userMsg=$_REQUEST['userMsg'];
-			$subject = "Message from ".$userName; 
+			$subject = "Message from ".$userName;
 			$message = '<html><head><title>'.$subject.'</title></head><body><table><tr><td>Email id :  </td><td> '.$userEmail.'</td></tr>
 <tr><td>Phone No : </td><td> '.$userPhone.'</td></tr><tr><td>Name : </td><td> '.$userName.'</td></tr><tr><td>Says : </td><td> '.$userMsg.'</td>
 </tr></table></body></html>';
@@ -30,5 +23,5 @@ License URL: http://creativecommons.org/licenses/by/3.0/
           	  $mail_status='yes';
           	header("Location: contact.html");
 			exit();
-           
+
          } ?>
