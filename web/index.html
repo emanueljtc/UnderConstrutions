@@ -20,11 +20,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <script type="text/javascript">
 $(function () {
 	var austDay = new Date();
-	
-	alert(austDay.getFullYear());
+
+	//alert(austDay.getFullYear());
 	austDay = new Date(austDay.getFullYear() - 0, 06, 1-2);
 	//new Date(2014, 12-1, 25);
-	
+
 	$('#mostrarf').countdown({until: austDay});
 	//$('.block').text(austDay.getFullYear());
 });
@@ -83,7 +83,7 @@ $(function () {
 			<!--Colocar Conteo regresivo-->
 
 			<!--<div class="block">
-				
+
 				<span class="flip-btm"></span>
 				<footer class="label">Dias</footer>
 			</div>
