@@ -11,10 +11,24 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link rel="stylesheet" href="web/css/style.css" media="all" type="text/css">
+<link href='web/css/jquery.countdown.css' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
 <script type="text/javascript" language="javascript" src="web/js/jquery.min.js"></script>
+<script src="web/js/jquery.plugin.js"></script>
+<script src="web/js/jquery.countdown.js"></script>
+<script src="web/js/jquery.countdown-es.js"></script>
 <script type="text/javascript">
-$(document).ready(function(){
+$(function () {
+	var austDay = new Date();
+	
+	alert(austDay.getFullYear());
+	austDay = new Date(austDay.getFullYear() - 0, 06, 1-2);
+	//new Date(2014, 12-1, 25);
+	
+	$('#mostrarf').countdown({until: austDay});
+	//$('.block').text(austDay.getFullYear());
+});
+/*$(document).ready(function(){
 	var theDaysBox  = $("#numdays");
 	var theHoursBox = $("#numhours");
 	var theMinsBox  = $("#nummins");
@@ -49,7 +63,7 @@ $(document).ready(function(){
       	theSecsBox.html(currentSeconds-1);
       }
    }, 1000);
-});
+});*/
 </script>
 </head>
 <body>
@@ -64,7 +78,12 @@ $(document).ready(function(){
 		<h3>Proximamente por aqui tendremos nuestro nuevo sitio,&nbsp;<span>Solo Faltan...!</span></h3>
 		<div class	="clock-ticker" class="clearfix">
 			<div class="block">
-				<span class="flip-top" id="numdays">20</span>
+				<div id="mostrarf"></div>
+			</div>
+			<!--Colocar Conteo regresivo-->
+
+			<!--<div class="block">
+				
 				<span class="flip-btm"></span>
 				<footer class="label">Dias</footer>
 			</div>
@@ -82,12 +101,12 @@ $(document).ready(function(){
 				<span class="flip-top" id="numsecs">0</span>
 				<span class="flip-btm"></span>
 				<footer class="label">Segundos</footer>
-			</div>
+			</div>-->
 		</div>
 			<form class="searchbox">
 				<input class="search" type="text" placeholder="Ingresa Tu Correo Para Notificarte El Lanzamiento de Nuestro Web Site">
-		    <input class="submit" type="submit" value="Noticarme" >
-	</form>
+		    	<input class="submit" type="submit" value="Noticarme" >
+			</form>
 	</div>
 	<div class="clear"></div>
 	<div class="content">
@@ -103,11 +122,13 @@ $(document).ready(function(){
 		<div class="clear"></div>
 	</div>
 	<div class="clear"></div>
+
 	</div>
+	<div class="footer">
+	<p>Desarrollado por <a href="#">Compu_Seven</a></p>
 </div>
-<div class="footer">
-	<p>Echo por <a href="#">Compu_Seven</a></p>
 </div>
+
 </div>
 </body>
 </html>
