@@ -72,7 +72,7 @@ h3{
 /*timer*/
 .clock-ticker {
 	margin:10px 0 6px;
-	width: 100%; 
+	width: 100%;
 	display:inline-block;
 }
 .clock-ticker .block:nth-child(4) {
@@ -80,7 +80,7 @@ h3{
 }
 .clock-ticker .block {
 	 font-family: 'amblelight_condensed_italic';
-	width:23.33%;
+	width:100%;
 	position: relative;
 	color:#45A09B;
 	font-weight: bold;
@@ -89,17 +89,17 @@ h3{
 	background: #ffffff;
 	box-shadow:0px 0px 10px #999;
 }
-.clock-ticker .block .flip-top { 
-	 font-size:1.4em; 
-	 text-align: center; 
+.clock-ticker .block .flip-top {
+	 font-size:1.4em;
+	 text-align: center;
 }
 .label {
 	font-family: "Century Gothic" Helvetica, sans-serif;
 	 color:rgb(70, 175, 169);
-	 font-weight:normal; 
+	 font-weight:normal;
 	 font-size: 0.9em;
 	 text-transform:capitalize;
-	 margin-bottom:8px; 
+	 margin-bottom:8px;
 }
 .searchbox {
 	position:relative;
@@ -217,7 +217,7 @@ h3{
 color: rgb(240, 144, 0);
 }
 .footer a{
-	color:#45A09B;	
+	color:#45A09B;
 }
 .footer a:hover{
 	text-decoration:underline;

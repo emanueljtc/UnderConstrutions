@@ -9,49 +9,26 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <head>
 <title>Compu_Seven</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="The free Professory-UnderConstruction Iphone web template, Andriod web template, Smartphone web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<meta name="keywords" content="UnderConstrutions" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(
-hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<link rel="stylesheet" href="smartphone/css/style.css" media="all" rel="stylesheet">
+<link rel="stylesheet" href="smartphone/css/style.css" media="all" type="text/css">
+<link href='smartphone/css/jquery.countdown.css' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
 <script type="text/javascript" language="javascript" src="smartphone/js/jquery.min.js"></script>
+<script src="smartphone/js/jquery.plugin.js"></script>
+<script src="smartphone/js/jquery.countdown.js"></script>
+<script src="smartphone/js/jquery.countdown-es.js"></script>
 <script type="text/javascript">
-$(document).ready(function(){
-	var theDaysBox  = $("#numdays");
-	var theHoursBox = $("#numhours");
-	var theMinsBox  = $("#nummins");
-	var theSecsBox  = $("#numsecs");
 
-	var refreshId = setInterval(function() {
-	  var currentSeconds = theSecsBox.text();
-	  var currentMins    = theMinsBox.text();
-	  var currentHours   = theHoursBox.text();
-	  var currentDays    = theDaysBox.text();
+$(function () {
+	var austDay = new Date();
 
-	  if(currentSeconds == 0 && currentMins == 0 && currentHours == 0 && currentDays == 0) {
-	  	// if everything rusn out our timer is done!!
-	  	// do some exciting code in here when your countdown timer finishes
+	//alert(austDay.getFullYear());
+	austDay = new Date(austDay.getFullYear() - 0, 06, 1-2);
+	//new Date(2014, 12-1, 25);
 
-	  } else if(currentSeconds == 0 && currentMins == 0 && currentHours == 0) {
-	  	// if the seconds and minutes and hours run out we subtract 1 day
-	  	theDaysBox.html(currentDays-1);
-	  	theHoursBox.html("23");
-	  	theMinsBox.html("59");
-	  	theSecsBox.html("59");
-	  } else if(currentSeconds == 0 && currentMins == 0) {
-	  	// if the seconds and minutes run out we need to subtract 1 hour
-	  	theHoursBox.html(currentHours-1);
-	  	theMinsBox.html("59");
-	  	theSecsBox.html("59");
-	  } else if(currentSeconds == 0) {
-	  	// if the seconds run out we need to subtract 1 minute
-	  	theMinsBox.html(currentMins-1);
-	  	theSecsBox.html("59");
-	  } else {
-      	theSecsBox.html(currentSeconds-1);
-      }
-   }, 1000);
+	$('#mostrarf').countdown({until: austDay});
+	//$('.block').text(austDay.getFullYear());
 });
 </script>
 </head>
@@ -67,31 +44,34 @@ $(document).ready(function(){
 		<h3>Proximamente por aqui tendremos nuestro nuevo sitio,&nbsp;<span>Solo Faltan...!</span></h3>
 		<div class	="clock-ticker" class="clearfix">
 			<div class="block">
-				<span class="flip-top" id="numdays">20</span>
-				<span class="flip-btm"></span>
-				<footer class="label">Dias</footer>
+				<div id="mostrarf"></div>
 			</div>
-			<div class="block">
-				<span class="flip-top" id="numhours">20</span>
-				<span class="flip-btm"></span>
-				<footer class="label">Horas</footer>
-			</div>
-			<div class="block">
-				<span class="flip-top" id="nummins">00</span>
-				<span class="flip-btm"></span>
-				<footer class="label">Minutos</footer>
-			</div>
-			<div class="block">
-				<span class="flip-top" id="numsecs">0</span>
-				<span class="flip-btm"></span>
-				<footer class="label">Segundos</footer>
-			</div>
-		</div>
-			<form class="searchbox">
-	    <input class="search" type="text" placeholder="Ingresa Tu Correo Para Notificarte El Lanzamiento de Nuestro Web Site">
-	    <input class="submit" type="submit" value="Noticarme" >
-	</form>
-	</div>
+						<!-- <div class="block">
+							<span class="flip-top" id="numdays">20</span>
+							<span class="flip-btm"></span>
+							<footer class="label">Dias</footer>
+						</div>
+						<div class="block">
+							<span class="flip-top" id="numhours">20</span>
+							<span class="flip-btm"></span>
+							<footer class="label">Horas</footer>
+						</div>
+						<div class="block">
+							<span class="flip-top" id="nummins">00</span>
+							<span class="flip-btm"></span>
+							<footer class="label">Minutos</footer>
+						</div>
+						<div class="block">
+							<span class="flip-top" id="numsecs">0</span>
+							<span class="flip-btm"></span>
+							<footer class="label">Segundos</footer>
+						</div>
+					</div>
+						<form class="searchbox">
+					    <input class="search" type="text" placeholder="Ingresa Tu Correo Para Notificarte El Lanzamiento de Nuestro Web Site">
+					    <input class="submit" type="submit" value="Noticarme" >
+						</form>
+				 </div> -->
 	<div class="clear"></div>
 	<div class="content">
 	<div class="icons">
